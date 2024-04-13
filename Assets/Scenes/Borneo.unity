@@ -933,6 +933,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400991195}
   m_CullTransparentMesh: 1
+--- !u!1 &433350002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433350004}
+  - component: {fileID: 433350003}
+  m_Layer: 0
+  m_Name: Simulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &433350003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433350002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contestants:
+  - name: B.B.
+    tribe: Pagong
+    Image: {fileID: 762354502}
+  - name: Colleen
+    tribe: Pagong
+    Image: {fileID: 1979773833}
+  - name: Greg
+    tribe: Pagong
+    Image: {fileID: 646836645}
+  - name: Gretchen
+    tribe: Pagong
+    Image: {fileID: 2056210588}
+  - name: Jenna
+    tribe: Pagong
+    Image: {fileID: 168339967}
+  - name: Joel
+    tribe: Pagong
+    Image: {fileID: 1281703678}
+  - name: Ramona
+    tribe: Pagong
+    Image: {fileID: 881462073}
+  - name: Gervase
+    tribe: Pagong
+    Image: {fileID: 2036024510}
+  - name: Dirk
+    tribe: Tagi
+    Image: {fileID: 1939846791}
+  - name: Kelly
+    tribe: Tagi
+    Image: {fileID: 668864457}
+  - name: Richard
+    tribe: Tagi
+    Image: {fileID: 1713270607}
+  - name: Rudy
+    tribe: Tagi
+    Image: {fileID: 541440883}
+  - name: Sean
+    tribe: Tagi
+    Image: {fileID: 383750209}
+  - name: Sonja
+    tribe: Tagi
+    Image: {fileID: 214657991}
+  - name: Stacey
+    tribe: Tagi
+    Image: {fileID: 13036008}
+  - name: Sue
+    tribe: Tagi
+    Image: {fileID: 601010847}
+--- !u!4 &433350004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433350002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.80338806, y: 0.2533831, z: 510.89337}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443811451
 GameObject:
   m_ObjectHideFlags: 0
