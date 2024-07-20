@@ -6,13 +6,11 @@ using UnityEngine;
 public class Contestant 
 {
     public string name;
-    public string tribe;
     public GameObject Image;
     public List<Relationship>  relationships;
-    public Contestant(string name, string tribe)
+    public Contestant(string name)
     {
         this.name = name;
-        this.tribe = tribe;
     }
     public void AddRelationship(Relationship r)
     {

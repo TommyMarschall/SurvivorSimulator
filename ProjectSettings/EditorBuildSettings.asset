@@ -23,4 +23,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Marquesas/Marquesas.unity
     guid: de969439b97aea54bbc06f81da20326f
+  - enabled: 1
+    path: Assets/Scenes/Thailand/Thailand.unity
+    guid: 4d85644454380434ba405926b03f21b6
+  - enabled: 1
+    path: Assets/Scenes/Amazon.unity
+    guid: 6023f90e4a71c0849a2f951bc80ce0f6
+  - enabled: 1
+    path: Assets/Scenes/Pearl Islands.unity
+    guid: 0e4a37d8bb3d57b46844f55869ec731f
+  - enabled: 1
+    path: Assets/Scenes/All Stars.unity
+    guid: e9ff2ef3761bc904da0f2ec8253bbf57
+  - enabled: 1
+    path: Assets/Scenes/Vanuatu.unity
+    guid: 905be1178e9256d42a859ff83d478a47
+  - enabled: 1
+    path: Assets/Scenes/Palau.unity
+    guid: ca6e6d2f32f76944a97a0b9b864d9c48
   m_configObjects: {}
