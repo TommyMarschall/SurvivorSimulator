@@ -12,4 +12,8 @@ public class AllyEvent
         this.modifier = modifier;
         this.discriptor = discriptor;
     }
+    public override string ToString()
+    {
+        return this.discriptor;
+    }
 }

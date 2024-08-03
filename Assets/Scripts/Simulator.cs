@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using System;
+using TMPro;
 
 
 public class Simulator : MonoBehaviour
@@ -9,6 +10,7 @@ public class Simulator : MonoBehaviour
     public GameObject SimulationScreen;
     public List<Contestant> contestants;
     public List<Tribe> tribes;
+    public GameObject EventPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,17 +42,24 @@ public class Simulator : MonoBehaviour
                 Tribe.tribeMembers.Add(contestants.Find(c => c.name == contestant.name));
             }
         }
+        PickEvent(tribes[0].tribeMembers[0], tribes[0].tribeMembers[1]);
+        GameObject event1 = Instantiate(EventPrefab);
+        event1.GetComponent<RectTransform>().SetParent( SimulationScreen.GetComponent<RectTransform>());
+        event1.transform.GetChild(2).GetComponent<TMP_Text>().text = "Something Random";
     }
     public string[] posAllies = { "Find Something in Common","Bond Strongly","Bond Slightly",""};
     public string[] negAllies = { "Have a Minor Disagreement","Has a Major Meltdown","Have a Small Fight","Have a Major Disagreement","Have a Major Fight"};
     void PickEvent (Contestant C1 , Contestant C2)
     {
-        float mod = Random.Range (-1.0f, 1.0f);
+        float mod = UnityEngine.Random.Range (-1.0f, 1.0f);
         string desc;
         if (mod > 0) 
         { 
-            desc = posAllies[Random.next(0, posAllies.Length)];
-        }
-        AllyEvent AllyEvent = new AllyEvent (mod,)
+            desc = posAllies[new System.Random().Next(0, posAllies.Length)];
+        } 
+        else { desc = negAllies[new System.Random().Next(0, negAllies.Length)]; } 
+        Debug.Log(desc);
+        AllyEvent AllyEvent = new AllyEvent(mod,desc);
+        Debug.Log(C1.name+" and " +C2.name+" "+AllyEvent.ToString());
     }
 }
