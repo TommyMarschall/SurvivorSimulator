@@ -12,6 +12,7 @@ public class Simulator : MonoBehaviour
     public List<Contestant> contestants;
     public List<Tribe> tribes;
     public GameObject EventPrefab;
+    public GameObject EventScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,8 @@ public class Simulator : MonoBehaviour
     }
     public void Simulate()
     {
+        Destroy(GameObject.Find("Event(Clone)"));
+
         GameObject.Find("StartScreen").SetActive(false);
         SimulationScreen.SetActive(true);
         foreach (var Tribe in tribes)
@@ -45,6 +48,8 @@ public class Simulator : MonoBehaviour
         }
         AllyEvent AllyEvent = PickEvent(tribes[0].tribeMembers[new System.Random().Next(0,8)], tribes[0].tribeMembers[new System.Random().Next(0,8)]);
         CreateEventVisual(AllyEvent);
+       // EventScreen.SetActive(false);
+
         
     }
     public string[] posAllies = { "Find Something in Common","Bond Strongly","Bond Slightly"};
