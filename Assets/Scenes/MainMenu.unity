@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Africa
+  sceneEnum: 3
 --- !u!114 &716004711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Pearl Islands
+  sceneEnum: 7
 --- !u!114 &879133924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Vanuatu
+  sceneEnum: 9
 --- !u!114 &882890387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Borneo
+  sceneEnum: 1
 --- !u!114 &1012345112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Marquesas
+  sceneEnum: 4
 --- !u!114 &1285430520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Palau
+  sceneEnum: 10
 --- !u!114 &1288824345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Thailand
+  sceneEnum: 5
 --- !u!114 &1615230406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Australia
+  sceneEnum: 2
 --- !u!114 &1877782871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: All Stars
+  sceneEnum: 8
 --- !u!114 &1911678067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2545,7 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a06ec6168a7fe419abd6812729786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Amazon
+  sceneEnum: 6
 --- !u!114 &2000960827
 MonoBehaviour:
   m_ObjectHideFlags: 0

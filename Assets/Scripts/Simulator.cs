@@ -14,11 +14,24 @@ public class Simulator : MonoBehaviour
     public GameObject EventPrefab;
     public GameObject EventScreen;
     // Start is called before the first frame update
+    private Button button;
     void Start()
     {
+        button = GetComponent<Button>();
+        if (button != null)
+        {
+            button.onClick.AddListener(StartSimulation);
+        }
+        else
+        {
+            Debug.LogWarning("No Button component found on this GameObject.");
+        }
+    }
+    private void StartSimulation(){
+
         foreach (var contestant in contestants)
         {
-            foreach(var contestant2 in contestants)
+            foreach (var contestant2 in contestants)
             {
                 if (contestant != contestant2)
                 {
@@ -26,8 +39,7 @@ public class Simulator : MonoBehaviour
                 }
             }
         }
-    }
-
+    });
     // Update is called once per frame
     void Update()
     {
