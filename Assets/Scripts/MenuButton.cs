@@ -31,6 +31,8 @@ public class MenuButton : MonoBehaviour
     {
         SceneManager.LoadScene(sceneEnum.ToString());
     }
+    
+  
 }
 public enum Scenes
 {

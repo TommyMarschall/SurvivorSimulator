@@ -16,7 +16,8 @@ public class Simulator : MonoBehaviour
     // Start is called before the first frame update
     private Button button;
     
-    private void StartSimulation(){
+    public void StartSimulation(){
+        Debug.Log("Simulation Started");
 
         foreach (var contestant in contestants)
         {
@@ -28,6 +29,7 @@ public class Simulator : MonoBehaviour
                 }
             }
         }
+        Simulate();
     }
     // Update is called once per frame
     void Update()
@@ -48,6 +50,7 @@ public class Simulator : MonoBehaviour
             }
         }
         AllyEvent AllyEvent = PickEvent(tribes[0].tribeMembers[new System.Random().Next(0,8)], tribes[0].tribeMembers[new System.Random().Next(0,8)]);
+        Debug.Log("Ally Event: " + AllyEvent);
         CreateEventVisual(AllyEvent);
        // EventScreen.SetActive(false);
 
