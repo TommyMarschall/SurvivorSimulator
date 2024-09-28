@@ -15,7 +15,7 @@ public class Simulator : MonoBehaviour
     public GameObject EventScreen;
     // Start is called before the first frame update
     private Button button;
-    
+    //Initalizes the simulation by setting up relationships between contestants
     public void StartSimulation(){
         Debug.Log("Simulation Started");
 
@@ -31,17 +31,15 @@ public class Simulator : MonoBehaviour
         }
         Simulate();
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //Runs the main Simulation
     public void Simulate()
     {
+        //Destroy any existing screen and hide the start screen
         Destroy(GameObject.Find("Event(Clone)"));
-
+        //Shows Simulation screen and hides start screen
         GameObject.Find("StartScreen").SetActive(false);
         SimulationScreen.SetActive(true);
+        //assign contestants to their tribe
         foreach (var Tribe in tribes)
         {
             foreach (var contestant in Tribe.TribeSelector.GetComponent<TribeSelector>().TribeSlots)
@@ -49,13 +47,14 @@ public class Simulator : MonoBehaviour
                 Tribe.tribeMembers.Add(contestants.Find(c => c.name == contestant.name));
             }
         }
+        //Pick random event for two people
         AllyEvent AllyEvent = PickEvent(tribes[0].tribeMembers[new System.Random().Next(0,8)], tribes[0].tribeMembers[new System.Random().Next(0,8)]);
         Debug.Log("Ally Event: " + AllyEvent);
         CreateEventVisual(AllyEvent);
-       // EventScreen.SetActive(false);
 
         
     }
+    //List of potential positive and negative events
     public string[] posAllies = { "Find Something in Common","Bond Strongly","Bond Slightly"};
     public string[] negAllies = { "Have a Minor Disagreement","Has a Major Meltdown","Have a Small Fight","Have a Major Disagreement","Have a Major Fight"};
     AllyEvent PickEvent (Contestant C1 , Contestant C2)
@@ -75,10 +74,12 @@ public class Simulator : MonoBehaviour
     void CreateEventVisual(AllyEvent AllyEvent)
     {
         GameObject event1 = Instantiate(EventPrefab);
-        event1.GetComponent<RectTransform>().SetParent(SimulationScreen.GetComponent<RectTransform>());
+        event1.transform.SetParent(null);
+        event1.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
         event1.transform.localScale = Vector3.one;
         event1.transform.GetChild(0).GetComponent<TMP_Text>().text = AllyEvent.contestant1.name + " and " + AllyEvent.contestant2.name + " " + AllyEvent.ToString();
         event1.transform.GetChild(1).GetComponent<Image>().sprite = AllyEvent.contestant1.Image.GetComponent<Image>().sprite;
         event1.transform.GetChild(2).GetComponent<Image>().sprite = AllyEvent.contestant2.Image.GetComponent<Image>().sprite;
     }
+
 }
