@@ -475,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 0}
+  m_AnchoredPosition: {x: 327, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122922051
@@ -1627,7 +1627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SimulationScreen: {fileID: 1930184331}
   contestants:
   - name: B.B.
     Image: {fileID: 762354502}
@@ -1669,7 +1668,6 @@ MonoBehaviour:
     name: Tagi
     TribeSelector: {fileID: 561465124}
   EventPrefab: {fileID: 6536704452586195630, guid: 939d1e204cb180e499fd8f348e04da6f, type: 3}
-  EventScreen: {fileID: 751750760}
   posAllies:
   - Find Something in Common
   - Bond Strongly
@@ -5110,7 +5108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1890113464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5123,7 +5121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab1b6646c869d4eb498320b86ab1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox1: {fileID: 0}
+  player1: 
+  player2: 
+  textbox1: {fileID: 173277372}
   players:
   - B.B.
   - Colleen
@@ -5160,7 +5160,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  gameObject: {fileID: 0}
+  eventPrefab: {fileID: 6536704452586195630, guid: 939d1e204cb180e499fd8f348e04da6f, type: 3}
 --- !u!4 &1890113465
 Transform:
   m_ObjectHideFlags: 0
