@@ -576,6 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab1b6646c869d4eb498320b86ab1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: 
+  player2: 
   textbox1: {fileID: 2070325248}
   players:
   - B.B.
@@ -613,7 +615,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  gameObject: {fileID: 0}
+  eventPrefab: {fileID: 0}
 --- !u!4 &259409582
 Transform:
   m_ObjectHideFlags: 0
@@ -1650,6 +1652,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634676414}
   m_CullTransparentMesh: 1
+--- !u!1 &655968181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655968183}
+  - component: {fileID: 655968182}
+  m_Layer: 0
+  m_Name: AmazonMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &655968182
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655968181}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 72db5782c0eb97b4693273362b933998, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &655968183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655968181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42554638, y: 0.084798455, z: 1.0938166}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740580061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,55 +2802,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SimulatorScreen: {fileID: 0}
   contestants:
   - name: B.B.
-    tribe: Pagong
     Image: {fileID: 1389415399}
   - name: Colleen
-    tribe: Pagong
     Image: {fileID: 882740364}
   - name: Greg
-    tribe: Pagong
     Image: {fileID: 810710131}
   - name: Gretchen
-    tribe: Pagong
     Image: {fileID: 1029440765}
   - name: Jenna
-    tribe: Pagong
     Image: {fileID: 494889602}
   - name: Joel
-    tribe: Pagong
     Image: {fileID: 165786944}
   - name: Ramona
-    tribe: Pagong
     Image: {fileID: 48364625}
   - name: Gervase
-    tribe: Pagong
     Image: {fileID: 888311342}
   - name: Dirk
-    tribe: Tagi
     Image: {fileID: 1747948730}
   - name: Kelly
-    tribe: Tagi
     Image: {fileID: 1985985167}
   - name: Richard
-    tribe: Tagi
     Image: {fileID: 1890111920}
   - name: Rudy
-    tribe: Tagi
     Image: {fileID: 1374793223}
   - name: Sean
-    tribe: Tagi
     Image: {fileID: 1075564208}
   - name: Sonja
-    tribe: Tagi
     Image: {fileID: 634676414}
   - name: Stacey
-    tribe: Tagi
     Image: {fileID: 537935124}
   - name: Sue
-    tribe: Tagi
     Image: {fileID: 2037965044}
+  tribes: []
+  EventPrefab: {fileID: 0}
+  posAllies:
+  - Find Something in Common
+  - Bond Strongly
+  - Bond Slightly
+  negAllies:
+  - Have a Minor Disagreement
+  - Has a Major Meltdown
+  - Have a Small Fight
+  - Have a Major Disagreement
+  - Have a Major Fight
 --- !u!4 &1110181269
 Transform:
   m_ObjectHideFlags: 0

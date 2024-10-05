@@ -1572,6 +1572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab1b6646c869d4eb498320b86ab1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: 
+  player2: 
   textbox1: {fileID: 13259054}
   players:
   - B.B.
@@ -1609,7 +1611,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  gameObject: {fileID: 0}
+  eventPrefab: {fileID: 0}
 --- !u!4 &501260133
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,6 +2747,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113232623}
   m_CullTransparentMesh: 1
+--- !u!1 &1163374704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163374706}
+  - component: {fileID: 1163374705}
+  m_Layer: 0
+  m_Name: PearlIslandsMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1163374705
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163374704}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7e9c4b6b5ab4a4a4a83bd4df7a527479, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.72
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1163374706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163374704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42554638, y: 0.084798455, z: 1.0938166}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358534631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,55 +4147,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SimulatorScreen: {fileID: 0}
   contestants:
   - name: B.B.
-    tribe: Pagong
     Image: {fileID: 28993052}
   - name: Colleen
-    tribe: Pagong
     Image: {fileID: 238009631}
   - name: Greg
-    tribe: Pagong
     Image: {fileID: 415543044}
   - name: Gretchen
-    tribe: Pagong
     Image: {fileID: 1358534631}
   - name: Jenna
-    tribe: Pagong
     Image: {fileID: 1486548998}
   - name: Joel
-    tribe: Pagong
     Image: {fileID: 1113232623}
   - name: Ramona
-    tribe: Pagong
     Image: {fileID: 747409195}
   - name: Gervase
-    tribe: Pagong
     Image: {fileID: 160444277}
   - name: Dirk
-    tribe: Tagi
     Image: {fileID: 1785595524}
   - name: Kelly
-    tribe: Tagi
     Image: {fileID: 332377827}
   - name: Richard
-    tribe: Tagi
     Image: {fileID: 1887090804}
   - name: Rudy
-    tribe: Tagi
     Image: {fileID: 1863418261}
   - name: Sean
-    tribe: Tagi
     Image: {fileID: 97489644}
   - name: Sonja
-    tribe: Tagi
     Image: {fileID: 1076133462}
   - name: Stacey
-    tribe: Tagi
     Image: {fileID: 766924867}
   - name: Sue
-    tribe: Tagi
     Image: {fileID: 1796381520}
+  tribes: []
+  EventPrefab: {fileID: 0}
+  posAllies:
+  - Find Something in Common
+  - Bond Strongly
+  - Bond Slightly
+  negAllies:
+  - Have a Minor Disagreement
+  - Has a Major Meltdown
+  - Have a Small Fight
+  - Have a Major Disagreement
+  - Have a Major Fight
 --- !u!4 &1994557304
 Transform:
   m_ObjectHideFlags: 0
