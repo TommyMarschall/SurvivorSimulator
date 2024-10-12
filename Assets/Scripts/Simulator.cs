@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Simulator : MonoBehaviour
 {
+    public GameObject SimilatorScreen;
+
     public List<Contestant> contestants; // List of all contestants in the simulation
     public List<Tribe> tribes; // List of all tribes in the simulation
     public GameObject EventPrefab; // Prefab to display individual events
@@ -70,9 +72,7 @@ public class Simulator : MonoBehaviour
     // Creates a visual representation of the event in the root of the scene
     void CreateEventVisual(AllyEvent allyEvent)
     {
-        GameObject event1 = Instantiate(EventPrefab); // Instantiate the EventPrefab in the root of the scene
-        event1.transform.SetParent(null); // This ensures it is not a child of any UI element
-
+        GameObject event1 = Instantiate(EventPrefab, SimilatorScreen.transform); // Instantiate the EventPrefab in the root of the scene
         // Set the position of the event UI element (adjust as necessary)
         event1.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0); // Centered position
 
