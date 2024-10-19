@@ -1381,11 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   SimulationScreen: {fileID: 1930184331}
-=======
-  SimulatorScreen: {fileID: 357887672}
->>>>>>> Stashed changes
   contestants:
   - name: B.B.
     Image: {fileID: 762354502}
@@ -4743,13 +4739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab1b6646c869d4eb498320b86ab1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   textbox1: {fileID: 173277372}
-=======
-  player1: 
-  player2: 
-  textbox1: {fileID: 0}
->>>>>>> Stashed changes
   players:
   - B.B.
   - Colleen
