@@ -12,7 +12,7 @@ public class Simulator : MonoBehaviour
     public List<Tribe> tribes; // List of all tribes in the simulation
     public GameObject EventPrefab; // Prefab to display individual events
     public GameObject EventScreen;
-    public Button button; // Added the button reference for consistency
+    //public Button button; // Added the button reference for consistency
 
     // List of potential positive and negative events
     public string[] posAllies = { "Find Something in Common", "Bond Strongly", "Bond Slightly" };
@@ -44,7 +44,7 @@ public class Simulator : MonoBehaviour
         Destroy(GameObject.Find("Event(Clone)"));
         
         // Show Simulation screen and hide start screen
-        GameObject.Find("StartScreen").SetActive(false);
+        //GameObject.Find("StartScreen").SetActive(false);
         SimulatorScreen.SetActive(true);
         
         // Assign contestants to their tribe

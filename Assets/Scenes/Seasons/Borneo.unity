@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e280addde0c772c489eeb5c99c7c596b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SimulationScreen: {fileID: 1930184331}
+  SimulatorScreen: {fileID: 357887672}
   contestants:
   - name: B.B.
     Image: {fileID: 762354502}
@@ -1423,7 +1423,7 @@ MonoBehaviour:
     name: Tagi
     TribeSelector: {fileID: 561465124}
   EventPrefab: {fileID: 6536704452586195630, guid: 939d1e204cb180e499fd8f348e04da6f, type: 3}
-  EventScreen: {fileID: 751750760}
+  EventScreen: {fileID: 6536704452586195630, guid: 939d1e204cb180e499fd8f348e04da6f, type: 3}
   posAllies:
   - Find Something in Common
   - Bond Strongly
